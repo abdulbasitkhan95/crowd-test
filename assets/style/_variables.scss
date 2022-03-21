@@ -1,0 +1,110 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+/* -------Start Of Website Color Branding-------- */
+
+$primary: #7B181E;
+$secondary: #CE1721;
+$darkGray: #191313;
+$middleGray: #969696;
+$lightGray: #E2E2E2;
+$white: #ffffff;
+$black: #000000;
+$paragraph-color: #2A2D31;
+$gradient01: $primary 0%,$secondary 100%;
+$gradient02: $white 0%,$white 100%;
+
+/* -------End Of Website Color Branding-------- */
+
+/* -------begin customization-------- */
+$body-bg: $white;
+$body-color: $secondary;
+$theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+                (
+                        "primary": $primary,
+                        "secondary": $secondary,
+                        "white": $white,
+                        "black": $black,
+
+                ),
+                $theme-colors
+);
+
+$font-family-base: $font-family-Purista, sans-serif;
+$headings-font-family: $font-family-Purista, sans-serif;
+$headings-color: $secondary;
+
+
+$h1-font-size: rem(50);
+$h2-font-size: rem(44);
+$h3-font-size: rem(40);
+$h4-font-size: rem(30);
+$h5-font-size: rem(28);
+$h6-font-size: rem(18);
+$lead-font-size: rem(24);
+$headings-margin-bottom: 0px;
+
+$btn-border-radius: 50px;
+$input-border-radius: 10px;
+$input-border-color: #707070;
+$input-font-size: rem(24);
+$input-border-width: 1px;
+$input-padding-y: 0;
+$input-padding-x: 0;
+$input-height: rem(63);
+$form-group-margin-bottom: rem(67);
+
+$input-placeholder-color:  rgba(#0D0D0D, .8);
+$input-plaintext-color:  rgba($white, 0.7);
+$link-hover-color: $secondary;
+
+
+$btn-padding-y: 0px;
+$btn-padding-x: 0px;
+$btn-border-width: 2px;
+
+::-moz-selection {
+  background: rgba($primary, 0.23);
+}
+
+::selection {
+  background: rgba($primary, 0.23);
+}
+
+//$color-red-error: $danger !default;
+//$color-green-success: $success;
+//$color-grey-arrow: $grey !default;
+
+$zindex-select-dropdown: 1060 !default; // must be higher than a modal background (1050)
+
+//** Placeholder text color
+$input-color-placeholder: $input-placeholder-color !default;
+$input-alt-color-placeholder: rgba($input-color-placeholder, 0.5) !default;
+
+/* -------end customization-------- */
+
+@media (min-width: 1200px) and (max-width: 1599.98px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 767px) {
+}

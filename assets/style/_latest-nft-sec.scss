@@ -1,0 +1,62 @@
+.latest-nfts-sec {
+  padding: rem(120) 0 0;
+}
+
+.nfts-box {
+  padding: rem(100) rem(75);
+  @include gradientbg(right, $gradient01);
+  clip-path: polygon(100% 0,100% 100%,100% 100%,100% 100%,0 100%,0 0);
+  @include transition(0.5s);
+  p {
+    margin-bottom: rem(80);
+  }
+  &.clippath-ntf {
+    clip-path: polygon(100% 0,85% 25%,100% 9%,100% 100%,0 100%,0 0);
+    &.animated {
+
+    }
+  }
+}
+
+.nft-card {
+  padding: rem(17);
+  background: $white;
+  display: inline-block;
+  figure {
+    width: rem(270);
+    height: rem(270);
+  }
+  .nft-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 rem(5);
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .nft-title {
+    font-weight: 400;
+    color: $black;
+    font-family: $font-family-Cairo;
+    display: block;
+    font-size: rem(16);
+  }
+  .nft-data {
+    font-weight: 400;
+    color: #000;
+    font-family: $font-family-Cairo;
+    display: block;
+    font-size: rem(16);
+  }
+  .nft-name {
+    font-size: rem(20);
+    color: $black;
+    font-weight: 700;
+  }
+}
+
+.nft-slider-js {
+  .slick-slide {
+    margin: 0 rem(12);
+  }
+}

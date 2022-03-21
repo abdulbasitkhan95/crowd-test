@@ -1,0 +1,181 @@
+.mobileText {
+  display: none;
+}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+@media screen and (min-width: 500px) and (max-width: 767px) and (orientation: landscape) {
+  body {
+    overflow: hidden !important;
+
+    .mobileText {
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      font-size: em(20);
+      line-height: em(22);
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 9999999999;
+      height: 100vh;
+      overflow: hidden;
+      background: $primary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        margin: 0 auto;
+        display: block;
+        font-size: 3em;
+        height: em(30);
+        width: em(30);
+      }
+
+      p {
+        font-size: em(16);
+        margin: 0 auto;
+        color: $white;
+      }
+
+      a.logo {
+        text-align: center;
+        margin: 0 auto;
+        height: auto;
+
+        img {
+          margin: 0 auto
+        }
+      }
+    }
+
+    #nav-icon3 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-device-width: 767px) and (orientation: landscape) {
+  .safari {
+    &.orientation_landscape {
+      overflow: hidden !important;
+
+      .mobileText {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        font-size: em(24);
+        line-height: em(20);
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 99999;
+        height: 100vh;
+        overflow: hidden;
+        background: $primary;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          margin: 0 auto;
+          font-size: 3em;
+          bottom: 5%;
+          height: em(30);
+          width: em(30);
+        }
+
+        p {
+          font-size: em(18);
+          margin: 0 auto;
+          color: $white;
+        }
+
+        a.logo {
+          text-align: center;
+          margin: 0 auto;
+          width: em(323);
+          height: auto;
+
+          img {
+            margin: 0 auto
+          }
+        }
+
+      }
+
+      #nav-icon3 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .mobileText {
+    display: none;
+  }
+}
+
+/* 2688x1242px at 458ppi */
+@media only screen and (device-height: 896px) and (orientation: landscape) {
+  body {
+    overflow: hidden !important;
+
+    .mobileText {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-size: em(20);
+      line-height: em(22);
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: 9999999999;
+      height: 100vh;
+      overflow: hidden;
+      background: $primary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        display: block;
+        margin: 0 auto;
+        font-size: 3em;
+        bottom: 5%;
+        height: em(30);
+        width: em(30);
+      }
+
+      p {
+        font-size: em(18);
+        margin: 0 auto;
+        color: $white;
+      }
+
+      a.logo {
+        text-align: center;
+        margin: 0 auto;
+        width: em(323);
+        height: auto;
+
+        img {
+          margin: 0 auto
+        }
+      }
+    }
+
+    #nav-icon3 {
+      display: none;
+    }
+  }
+}

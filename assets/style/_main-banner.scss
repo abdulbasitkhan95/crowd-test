@@ -1,0 +1,44 @@
+.main-banner {
+  height: rem(780);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: flex-end;
+  margin-top: rem(40);
+  padding-bottom: rem(70);
+  background-color: $black;
+  overflow: hidden;
+}
+
+.bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: rem(720);
+  z-index: -1;
+  &:before {
+    content: "";
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    left: rem(-1);
+    top: rem(-1);
+    background: radial-gradient(closest-side,#00000000,#0000006b,#000000);
+  }
+}
+
+.bg-effect{
+  position: absolute;
+  z-index: -1;
+  &.right {
+    right: rem(-30);
+  }
+  &.left {
+    right: inherit;
+    left: rem(-30);
+  }
+}

@@ -1,0 +1,132 @@
+.roadmap-sec {
+  padding: rem(70) 0;
+  h4 {
+    margin-bottom: rem(60);
+  }
+}
+
+.cstm-container {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  .roadmap-line {
+    width: 87%;
+    height: rem(2);
+    position: absolute;
+    top: rem(221);
+    margin: auto;
+    left: auto;
+    right: 0;
+    background: linear-gradient(90deg, #981820 50%, transparent 50%);
+    background-repeat: repeat-x;
+    background-size: 16px 4px;
+    background-position: 0% 0%;
+    animation: dash 15s linear infinite;
+    z-index: -1;
+  }
+}
+
+.roadmap-slider {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.roadmap-card {
+  width: rem(382) !important;
+  text-align: center;
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: rem(30);
+  .card-img {
+    width: rem(281);
+    height: rem(185);
+    border: rem(1) solid $primary;
+    margin: 0 auto rem(60);
+    position: relative;
+    &:after {
+      content: "";
+      width: rem(18);
+      height: rem(18);
+      background: $secondary;
+      position: absolute;
+      left: 0;
+      bottom: rem(-47);
+      right: 0;
+      margin: auto;
+      border-radius: 100%;
+    }
+    &:before {
+      content: "";
+      width: rem(2);
+      height: rem(50);
+      background: $secondary;
+      position: absolute;
+      bottom: rem(-38);
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: -1;
+    }
+  }
+  .card-info {
+    width: rem(290);
+    height: rem(185);
+    h6 {
+      color: $white;
+      margin: 0 0 rem(8);
+    }
+    p {
+      color: $white;
+      font-size: rem(16);
+      font-family: $font-family-Cairo;
+    }
+    p.lead {
+      color: $secondary;
+      font-size: rem(24);
+      font-family: $font-family-Purista;
+    }
+  }
+  &:nth-child(even) {
+    .card-info {
+      order: 1;
+    }
+    .card-img {
+      order: 2;
+      margin: rem(70) auto 0;
+      &:before {
+        top: rem(-38);
+        bottom: inherit;
+      }
+      &:after {
+        top: rem(-43);
+        bottom: initial;
+      }
+    }
+  }
+}
+
+.roadmapSlider-js {
+  .slick-slide {
+    &:nth-child(even) {
+      .roadmap-card {
+        .card-info {
+          order: 1;
+        }
+        .card-img {
+          order: 2;
+          margin: rem(70) auto 0;
+          &:before {
+            top: rem(-38);
+            bottom: inherit;
+          }
+          &:after {
+            top: rem(-43);
+            bottom: initial;
+          }
+        }
+      }
+    }
+  }
+}

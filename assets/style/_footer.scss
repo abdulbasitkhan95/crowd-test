@@ -1,0 +1,27 @@
+footer {
+  padding: 0 0 rem(20);
+  .container {
+    border-top: rem(1) solid $primary;
+    padding-top: rem(60);
+  }
+  p {
+    color: $white;
+    font-size: rem(12);
+    margin: 0;
+  }
+  a {
+    color: $white;
+    font-size: rem(12);
+    text-decoration: none;
+    margin: 0 rem(10);
+  }
+}
+
+.footer-logo {
+  display: block;
+  text-align: center;
+  margin: 0 0 rem(40);
+  a {
+    display: inline-block;
+  }
+}

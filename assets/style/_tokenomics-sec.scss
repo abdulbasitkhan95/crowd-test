@@ -1,0 +1,84 @@
+.tokenomics-sec {
+  position: relative;
+  padding: rem(70) 0 rem(80);
+  .circle-chart {
+    margin: 65% 0 0 0;
+    padding: 0 0 0 rem(50);
+    position: relative;
+    svg {
+      width: rem(774);
+      height: rem(398);
+    }
+    .chart-tab {
+      position: absolute;
+      right: rem(-170);
+      width: rem(410);
+      top: rem(150);
+      h4 {
+        color: $white;
+        font-weight: 300;
+        font-size: rem(22);
+      }
+      .chart-pane {
+        opacity: 0;
+        padding: 0 0 0 rem(30);
+        position: absolute;
+        @include transition(0.5s);
+        &.active {
+          opacity: 1;
+        }
+        &:before {
+          content: "";
+          width: rem(20);
+          height: rem(20);
+          background: $danger;
+          position: absolute;
+          left: 0;
+          top: rem(5);
+          border: rem(1) solid $white;
+        }
+      }
+    }
+  }
+  .scroll-text {
+    max-width: rem(370);
+  }
+}
+
+.shape-triangle {
+  width: rem(838);
+  height: rem(1160);
+  position: absolute;
+  left: 0;
+  top: 0;
+  @include gradientbg(right, $gradient01);
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+  -webkit-clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+
+// Laptops large devices (desktops, 1600px and up)
+@media (min-width: 1600px) and (max-width: 1699.98px) {
+  .tokenomics-sec {
+    .circle-chart {
+      margin: 81% 0 0;
+    }
+  }
+}
+
+// Laptops large devices (desktops, 1400px and up)
+@media (min-width: 1400px) and (max-width: 1599.98px) {
+  .tokenomics-sec {
+    .circle-chart {
+      margin: 85% 0 0;
+    }
+  }
+}
+
+// Laptops small devices (desktops, 1200px and up)
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .tokenomics-sec {
+    .circle-chart {
+      margin: 95% 0 0;
+    }
+  }
+}
